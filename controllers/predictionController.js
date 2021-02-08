@@ -1,8 +1,8 @@
 const { JsonWebTokenError } = require('jsonwebtoken');
 const fetch = require('node-fetch');
 
-let url = "http://54.146.140.144/get-temp-predictions";
-let url2="http://54.146.140.144/get-rainfall-predictions";
+let url = "http://3.82.248.105/get-temp-predictions";
+let url2="http://3.82.248.105/get-rainfall-predictions";
 let settings = { method: "Get" };
 let JSON,JSON2
 fetch(url, settings)
