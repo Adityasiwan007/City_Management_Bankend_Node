@@ -7,6 +7,8 @@ const app = express();
 const port = process.env.PORT || 8001;
 app.use(express.json());
 
+var mongoUrl= process.env.MONGODB_URI || "mongodb://localhost:27017/CityManagement";
+
 const userController=require('./controllers/userControllers')
 const dataController=require('./controllers/weatherDataControllers')
 const predictionController=require('./controllers/predictionController')
@@ -32,7 +34,7 @@ app.route('/predictdata').get(predictionController.getPrediction);
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
 
-mongoose.connect("mongodb://localhost:27017/CityManagement", { server: { reconnectTries: Number.MAX_VALUE } }, function(err) {
+mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } }, function(err) {
     if (err) {
         console.log('info', 'Couldnt connect to MongoDB:', err);
     } else {

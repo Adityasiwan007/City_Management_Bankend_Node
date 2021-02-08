@@ -1,6 +1,8 @@
 let mongoose = require("mongoose");
 let User = require("./models/user_structure");
 let user_data = require("./users.json");
+var mongoUrl= process.env.MONGODB_URI || "mongodb://localhost:27017/CityManagement";
+
 async function loadData() {
   await User.deleteMany({});
 
@@ -11,7 +13,7 @@ async function loadData() {
   });
 }
 mongoose.connect(
-  "mongodb://localhost:27017/CityManagement",
+  mongoUrl,
   { server: { reconnectTries: Number.MAX_VALUE } },
   function(err) {
     if (err) {
