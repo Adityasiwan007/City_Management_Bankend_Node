@@ -47,4 +47,11 @@ Along with JSON
  use this Api: http://localhost:8001/predictdata 
 
 
+For Heroku: https://git.heroku.com/citymanagement.git
+
+For Git: https://github.com/Adityasiwan007/City_Management_Bankend_Node.git
+
+
+
+
 
