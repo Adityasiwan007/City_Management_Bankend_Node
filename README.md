@@ -3,18 +3,18 @@
 
 # Steps:
 
- For installing node Setup go to the folders using terminal:
- then type:
+For installing node Setup go to the folders using terminal:
+then type:
   
   npm init
   
   npm install 
   
- For installing express Setup:
+For installing express Setup:
  
   npm install express
   
- For loding all the data in the Database for 1 time user
+For loding all the data in the Database for 1 time user
   
   node data_loader.js
   

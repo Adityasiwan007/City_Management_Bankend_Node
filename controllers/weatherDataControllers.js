@@ -11,15 +11,6 @@ fetch(url, settings)
 
 
 exports.getData = async (req, res) => {
-
-    
-    // fetch(url, settings)
-    // .then(res => res.json())
-    // .then((json) => {
-    //     console.log(json);
-    // });
-
-    let pro_time = "Weather Controll data";
     return res.json(JSON);
   };
 

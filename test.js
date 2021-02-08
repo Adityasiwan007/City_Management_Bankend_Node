@@ -9,6 +9,7 @@ app.use(express.json());
 
 const userController=require('./controllers/userControllers')
 const dataController=require('./controllers/weatherDataControllers')
+const predictionController=require('./controllers/predictionController')
 
 
 app.get('/checkLive',async (req,res,next)=>{
@@ -18,6 +19,7 @@ app.get('/checkLive',async (req,res,next)=>{
 
 app.route('/login').post(userController.Login);
 app.route('/weatherdata').get(dataController.getData);
+app.route('/predictdata').get(predictionController.getPrediction);
 
 // app.post('/login',async (req,res,next)=>{
 //     const {
