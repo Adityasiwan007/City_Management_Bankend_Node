@@ -13,7 +13,7 @@ const predictionController=require('./controllers/predictionController')
 
 
 app.get('/checkLive',async (req,res,next)=>{
-    let pro_time = "Yes, You are Live. :)";
+    let pro_time = "Yes, You are Live in heroku. :)";
     res.send(pro_time);
 });
 
