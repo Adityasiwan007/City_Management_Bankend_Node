@@ -37,4 +37,14 @@ Along with JSON
     "Password":"adi"
     
  } 
+ 
+## For weatherdata to display in fronend: 
+
+ use this Api: http://localhost:8001/weatherdata 
+
+## For prediction of rainfall and temp: 
+
+ use this Api: http://localhost:8001/predictdata 
+
+
 
