@@ -15,7 +15,7 @@ const predictionController=require('./controllers/predictionController')
 
 
 app.get('/checkLive',async (req,res,next)=>{
-    let pro_time = "Yes, You are Live in heroku. :)";
+    let pro_time = "Yes, You are Live in heroku. Welcome to the City Management BackEnd:)";
     res.send(pro_time);
 });
 
