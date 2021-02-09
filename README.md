@@ -47,11 +47,16 @@ Along with JSON
  use this Api: http://localhost:8001/predictdata 
 
 
-### For Heroku: https://git.heroku.com/citymanagement.git
+### For Heroku: 
 
-### For Git: https://github.com/Adityasiwan007/City_Management_Bankend_Node.git
+https://git.heroku.com/citymanagement.git
 
+### For Git: 
 
+https://github.com/Adityasiwan007/City_Management_Bankend_Node.git
 
+### For conneting Remote MongoDB Compass: 
+
+mongodb+srv://Aditya:<password>@cluster0.qqq3s.mongodb.net/test
 
 
