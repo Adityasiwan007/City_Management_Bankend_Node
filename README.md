@@ -50,7 +50,7 @@ After that you can use this code.. and Start the server by typing: npm start or 
 
  Use this Api: http://localhost:8001/predictdata 
 
-# -----------------------------------------------------------------------------------------
+# ------------------------------------------------------
 
 ### For Heroku: 
 
