@@ -10,7 +10,7 @@ exports.Login = async (req, res) => {
     // res.send(pro);
     User.findOne({ 'UserName': Name },async function (err, customer) {
         if (err) {
-            winston.log('error', 'User Creation failed : ', err.toString());
+            console.log('error', 'User Creation failed : ', err.toString());
             res.send({ success: false, message: 'Something bad happend, please try again' });
             return;
         }

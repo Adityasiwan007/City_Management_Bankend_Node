@@ -23,14 +23,6 @@ app.route('/login').post(userController.Login);
 app.route('/weatherdata').get(dataController.getData);
 app.route('/predictdata').get(predictionController.getPrediction);
 
-// app.post('/login',async (req,res,next)=>{
-//     const {
-//         Name, ID,
-//     } = req.body;
-//     let pro = `This is return valute to server: `+Name+' ID: '+ID;
-//     res.send(pro);
-// });
-
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
 
@@ -49,3 +41,4 @@ db.on('error', (error) => {
 db.once('open', () => {
   console.log('CityManagement DB connected successfully!');
 });
+
