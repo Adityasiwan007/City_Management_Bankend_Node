@@ -20,15 +20,19 @@ For loding all the data in the Database for 1 time user
   
 After that you can use this code.. and Start the server by typing: npm start or node test.js
 
- open the brower and check the local host: http://localhost:8001/index.html 
+ 
+
+# APIS: 
+
+ Open the brower and check the local host: http://localhost:8001/index.html 
  
  To check the sever is live or not: http://localhost:8001/checkLive
 
 ## For login 
 
- use this Api: http://localhost:8001/login 
+ Use this Api: http://localhost:8001/login 
 
-Along with JSON 
+ Along with JSON 
 
  {
  
@@ -40,12 +44,13 @@ Along with JSON
  
 ## For weatherdata to display in fronend: 
 
- use this Api: http://localhost:8001/weatherdata 
+ Use this Api: http://localhost:8001/weatherdata 
 
 ## For prediction of rainfall and temp: 
 
- use this Api: http://localhost:8001/predictdata 
+ Use this Api: http://localhost:8001/predictdata 
 
+# -----------------------------------------------------------------------------------------
 
 ### For Heroku: 
 
