@@ -26,7 +26,7 @@ app.route('/predictdata').get(predictionController.getPrediction);
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
 
-mongoose.connect(mongoUrl, { server: { reconnectTries: Number.MAX_VALUE } }, function(err) {
+mongoose.connect(mongoUrl, { useNewUrlParser:true }, function(err) {
     if (err) {
         console.log('info', 'Couldnt connect to MongoDB:', err);
     } else {

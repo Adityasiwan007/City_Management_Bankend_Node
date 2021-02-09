@@ -14,7 +14,7 @@ async function loadData() {
 }
 mongoose.connect(
   mongoUrl,
-  { server: { reconnectTries: Number.MAX_VALUE } },
+  { useNewUrlParser:true },
   function(err) {
     if (err) {
       console.log("info", "Couldnt connect to MongoDB:", err);
