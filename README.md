@@ -66,4 +66,4 @@ mongodb+srv://Aditya:<password>@cluster0.qqq3s.mongodb.net/test
 
 
 
-http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=53.34399&lon=-6.26719&dt="+str(t)+"&appid=6479fa080a30d358d9e38b388fc8c697"
+http://api.openweathermap.org/data/2.5/onecall/timemachine?lat=53.34399&lon=-6.26719&dt="+str(t)+"&appid=yourAPI
