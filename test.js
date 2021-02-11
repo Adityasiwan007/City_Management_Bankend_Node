@@ -12,6 +12,7 @@ var mongoUrl= process.env.MONGODB_URI || "mongodb://localhost:27017/CityManageme
 const userController=require('./controllers/userControllers')
 const dataController=require('./controllers/weatherDataControllers')
 const predictionController=require('./controllers/predictionController')
+const historyController=require('./controllers/historcalWeatherController')
 
 
 app.get('/checkLive',async (req,res,next)=>{
@@ -22,6 +23,7 @@ app.get('/checkLive',async (req,res,next)=>{
 app.route('/login').post(userController.Login);
 app.route('/weatherdata').get(dataController.getData);
 app.route('/predictdata').get(predictionController.getPrediction);
+app.route('/historicalweather').get(historyController.getHistory);
 
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
