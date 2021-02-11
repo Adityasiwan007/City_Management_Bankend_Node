@@ -36,7 +36,7 @@ exports.getHistory = async (req, res) => {
         else {
             console.log('info','Showing all the weather history');
             return res.json({
-                success:false,
+                success:true,
                 message: "Showing all the weather history",
                 data:his
             })
