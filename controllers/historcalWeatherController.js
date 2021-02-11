@@ -19,7 +19,7 @@ fetch(url, settings)
 
 exports.getHistory = async (req, res) => {
 
-    User.find({ },async function (err, his) {
+    History.find({ },async function (err, his) {
         if (err) {
             console.log('error', 'Weather Data Creation failed : ', err.toString());
             res.send({ success: false, message: 'Something bad happend, please try again' });
