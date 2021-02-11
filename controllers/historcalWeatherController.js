@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const History = require('../models/history_structure');
-
+const User = require('../models/user_structure');
 var now = new Date();
 var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 var timestamp = startOfDay / 1000;
@@ -19,7 +19,7 @@ fetch(url, settings)
 
 exports.getHistory = async (req, res) => {
 
-    History.find({ },async function (err, his) {
+    User.find({ },async function (err, his) {
         if (err) {
             console.log('error', 'Weather Data Creation failed : ', err.toString());
             res.send({ success: false, message: 'Something bad happend, please try again' });
