@@ -24,6 +24,7 @@ app.route('/login').post(userController.Login);
 app.route('/weatherdata').get(dataController.getData);
 app.route('/predictdata').get(predictionController.getPrediction);
 app.route('/historicalweather').get(historyController.getHistory);
+app.route('/uploadweather').get(historyController.enterHistory);
 
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
