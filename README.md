@@ -50,6 +50,14 @@ After that you can use this code.. and Start the server by typing: npm start or 
 
  Use this Api: http://localhost:8001/predictdata 
 
+## For getting the hisotry of weather data: 
+
+ Use this Api: http://localhost:8001/historicalweather 
+
+## For uploading the weather history manually: 
+
+ Use this Api: http://localhost:8001/uploadweather
+
 # ------------------------------------------------------
 
 ### For Heroku: 

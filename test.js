@@ -13,6 +13,7 @@ const userController=require('./controllers/userControllers')
 const dataController=require('./controllers/weatherDataControllers')
 const predictionController=require('./controllers/predictionController')
 const historyController=require('./controllers/historcalWeatherController')
+const weeklyController=require('./controllers/weeklyPredicitionControllers')
 
 
 app.get('/checkLive',async (req,res,next)=>{
@@ -25,6 +26,8 @@ app.route('/weatherdata').get(dataController.getData);
 app.route('/predictdata').get(predictionController.getPrediction);
 app.route('/historicalweather').get(historyController.getHistory);
 app.route('/uploadweather').get(historyController.enterHistory);
+app.route('/weeklydata').get(weeklyController.getWeekly);
+
 
 app.use('/', express.static(__dirname + '/'));
 app.listen(port);
