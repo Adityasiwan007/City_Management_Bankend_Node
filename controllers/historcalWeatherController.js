@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const History = require('../models/history_structure');
 const User = require('../models/user_structure');
 var now = new Date();
-var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()-4);
 var timestamp = startOfDay / 1000;
 const schedule = require ('node-schedule');
 

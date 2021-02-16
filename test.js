@@ -6,7 +6,7 @@ const router = require('express').Router();
 const app = express();
 const port = process.env.PORT || 8001;
 app.use(express.json());
-
+app.use(cors())
 var mongoUrl= process.env.MONGODB_URI || "mongodb://localhost:27017/CityManagement";
 
 const userController=require('./controllers/userControllers')
