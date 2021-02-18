@@ -32,7 +32,7 @@ fetch(url4, settings)
 .then(res => res.json())
 .then((json) => {
     JSON4=json
-    for(i=0;i<5;i++)
+    for(i=0;i<7;i++)
     {
         if(JSON4[i]<=30)
         {
