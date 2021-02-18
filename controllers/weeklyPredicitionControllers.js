@@ -46,13 +46,13 @@ fetch(url4, settings)
         }
         else if(JSON4[i]>50 && JSON4[i]<=80)
         {
-            cloud.push('Clody')
-            icon.push('w04d')
+            cloud.push('Overcast')
+            icon.push('w03d')
         }
         else
         {
-            cloud.push('Raining')
-            icon.push('w09d')
+            cloud.push('Cloudy')
+            icon.push('w04d')
         }
     }
     console.log(cloud);
