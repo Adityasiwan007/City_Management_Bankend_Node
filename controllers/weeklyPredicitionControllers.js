@@ -7,7 +7,7 @@ let url3="http://3.82.248.105/get-humidity-weekly";
 let url4="http://3.82.248.105/get-cloud-weekly";
 let settings = { method: "Get" };
 let JSON,JSON2,JSON3,JSON4
-let cloud=['Sunny','Partially Cloudy','Clody','Raining','Sunny'],icon=['w01d','w03d','w05d','w07d','w09d'],i
+let cloud=['Sunny','Partially Cloudy','Clody','Raining','Sunny'],icon=['w01d','w03d','w09d','w13d','w50d'],i
 
 fetch(url, settings)
     .then(res => res.json())
