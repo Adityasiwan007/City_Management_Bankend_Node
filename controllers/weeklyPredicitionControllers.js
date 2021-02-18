@@ -7,6 +7,7 @@ let url3="http://3.82.248.105/get-humidity-weekly";
 let url4="http://3.82.248.105/get-cloud-weekly";
 let settings = { method: "Get" };
 let JSON,JSON2,JSON3,JSON4
+let cloud=['Sunny','Partially Cloudy','Clody','Raining','Sunny'],icon=['w01d','w03d','w05d','w07d','w09d'],i
 
 fetch(url, settings)
     .then(res => res.json())
@@ -30,6 +31,11 @@ fetch(url4, settings)
 .then(res => res.json())
 .then((json) => {
     JSON4=json
+    // for(i=0;i<5;i++)
+    // {
+    //     cloud.push(JSON4[i])
+    // }
+    // console.log(cloud);
 });
 
 
@@ -38,5 +44,7 @@ exports.getWeekly = async (req, res) => {
     return res.json({tempWeekly:JSON,
     rainWeekly:JSON2,
     humidityWeekly:JSON3,
-    cloudWeekly:JSON4});
+    cloudWeekly:JSON4,
+    cloudString:cloud,
+    icon:icon});
   };
