@@ -13,7 +13,6 @@ fetch(url, settings)
         JSON=json
     });
 
-    
 fetch(url2, settings)
 .then(res => res.json())
 .then((json) => {
