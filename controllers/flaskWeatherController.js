@@ -31,7 +31,7 @@ const options = {
   request(options, function (error, response, body) {
       if (error) throw new Error(error);
       JSON1=(body);
-      console.log(body);
+    //   console.log(body);
   });
 
 
