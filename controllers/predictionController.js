@@ -7,6 +7,7 @@ let url3="http://3.82.248.105/get-cloudy-predictions";
 let url4 = "http://3.82.248.105/get-temp-predictions";
 let settings = { method: "Get" };
 let JSON,JSON2,JSON3,JSON4
+
 fetch(url, settings)
     .then(res => res.json())
     .then((json) => {

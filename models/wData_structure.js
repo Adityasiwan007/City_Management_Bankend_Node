@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 let schema=mongoose.Schema({
-    cloudcover: Number,
+    "cloudcover": Number,
     "conditions": String,
     "datetime": Number,
     "datetimeStr": String,

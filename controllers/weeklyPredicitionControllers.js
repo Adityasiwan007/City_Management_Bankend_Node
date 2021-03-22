@@ -39,7 +39,7 @@ fetch(url4, settings)
             cloud.push('Sunny')
             icon.push('w01d')
         }
-        else if(JSON[i]>30 && JSON[i]<=50)
+        else if(JSON4[i]>30 && JSON4[i]<=50)
         {
             cloud.push('Partially Sunny')
             icon.push('w02d')

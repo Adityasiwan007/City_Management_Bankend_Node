@@ -1,7 +1,8 @@
 const fetch = require('node-fetch');
 const History = require('../models/wData_structure');
 var now = new Date();
-var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()-19);
+var endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()-1);
 var timestamp = startOfDay / 1000;
 const schedule = require ('node-schedule');
 const request = require('request');
@@ -11,13 +12,13 @@ const options = {
     method: 'GET',
     url: 'https://visual-crossing-weather.p.rapidapi.com/history',
     qs: {
-      startDateTime: '2019-01-01T00:00:00',
+      startDateTime: startOfDay.toISOString().slice(0,19),
       aggregateHours: '24',
       location: "53.34399,-6.26719",
-      endDateTime: '2019-01-03T00:00:00',
+      endDateTime: endOfDay.toISOString().slice(0,19),
       unitGroup: 'us',
       dayStartTime: '8:00:00',
-      contentType: 'csv',
+      contentType: 'json',
       dayEndTime: '17:00:00',
       shortColumnNames: '0'
     },
@@ -30,8 +31,8 @@ const options = {
   
   request(options, function (error, response, body) {
       if (error) throw new Error(error);
-      JSON1=(body);
-    //   console.log(body);
+      //JSON1=body;
+      JSON1=JSON.parse(body)
   });
 
 
@@ -81,7 +82,6 @@ schedule.scheduleJob('0 0 * * *', () => {
     });
 })
 
-
 exports.getHistory = async (req, res) => {
 
     History.find({ },async function (err, his) {
@@ -99,6 +99,9 @@ exports.getHistory = async (req, res) => {
             })
         } 
         else {
+            his.sort(function(a, b){
+                return a.datetime - b.datetime;
+            });
             console.log('info','Showing all the weather history');
             return res.json({
                 success:true,
