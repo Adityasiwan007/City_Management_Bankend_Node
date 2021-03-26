@@ -70,6 +70,18 @@ After that you can use this code.. and Start the server by typing: npm start or 
 
  Use this Api: http://localhost:8001/bikedata
 
+## For view all the Event ID to front end: 
+
+ Use this Api: http://localhost:8001/eventid
+
+## For delete the one Event Id from the DB: 
+
+ Use this Api: http://localhost:8001/deleventid?id=139973682051
+
+## For add the Bone Event Id to the DB: 
+
+ Use this Api: http://localhost:8001/addeventid?id=139973682051
+
 
 # ------------------------------------------------------
 

@@ -16,6 +16,7 @@ const historyController=require('./controllers/historcalWeatherController')
 const weeklyController=require('./controllers/weeklyPredicitionControllers')
 const flaskController=require('./controllers/flaskWeatherController')
 const bikeController=require('./controllers/bikeController')
+const eventController=require('./controllers/eventController')
 
 
 app.get('/checkLive',async (req,res,next)=>{
@@ -31,6 +32,9 @@ app.route('/uploadweather').get(historyController.enterHistory);
 app.route('/weeklydata').get(weeklyController.getWeekly);
 app.route('/flaskdata').get(flaskController.getHistory);
 app.route('/bikedata').get(bikeController.getData);
+app.route('/eventid').get(eventController.getData);
+app.route('/addeventid').get(eventController.enterData);
+app.route('/deleventid').get(eventController.deleteData);
 
 
 app.use('/', express.static(__dirname + '/'));
