@@ -72,7 +72,11 @@ After that you can use this code.. and Start the server by typing: npm start or 
 
 ## For sending the traffic data to front end: 
 
- Use this Api: http://localhost:8001/bikedata
+ Use this Api: http://localhost:8001/trafficdata
+
+## For sending the pollution data to front end: 
+
+ Use this Api: http://localhost:8001/pollutiondata
 
 ## For view all the Event ID to front end: 
 
