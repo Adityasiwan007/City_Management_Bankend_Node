@@ -18,6 +18,7 @@ const flaskController=require('./controllers/flaskWeatherController')
 const bikeController=require('./controllers/bikeController')
 const eventController=require('./controllers/eventController')
 const traffiController=require('./controllers/trafficController')
+const pollutionController=require('./controllers/pollutionController')
 
 app.get('/checkLive',async (req,res,next)=>{
     let pro_time = "Yes, You are Live in heroku. Welcome to the City Management BackEnd Testing:)";
@@ -33,6 +34,7 @@ app.route('/weeklydata').get(weeklyController.getWeekly);
 app.route('/flaskdata').get(flaskController.getHistory);
 app.route('/bikedata').get(bikeController.getData);
 app.route('/trafficdata').get(traffiController.getData);
+app.route('/pollutiondata').get(pollutionController.getData);
 app.route('/eventid').get(eventController.getData);
 app.route('/addeventid').get(eventController.enterData);
 app.route('/deleventid').get(eventController.deleteData);
